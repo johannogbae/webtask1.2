@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .item {
+      border: 1px solid gray;
+      padding: 10px;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 768px) {
+      .content {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Responsive Web Design</h1>
+  </div>
+  <div class="content">
+    <div class="item">
+      <img src="https://wallpapercave.com/wp/tKN1a7Z.jpg" alt="Image 1">
+      <h2>Red</h2>
+      
+    </div>
+    <div class="item">
+      <img src="https://th.bing.com/th/id/R.0b992dc7f863e3784b0251b1be68caf7?rik=9RroTkhVBPZhfQ&riu=http%3a%2f%2fwallpapercave.com%2fwp%2f3qiHO2W.jpg&ehk=Y%2frfDvZRUeeA0qgQmL4qjmP6ge2wbQ%2fDh7c20q1n0Cg%3d&risl=&pid=ImgRaw&r=0" alt="Image 2">
+      <h2>Yellow</h2>
+      
+    </div>
+    <div class="item">
+      <img src="https://th.bing.com/th/id/R.3dc52254fb8d06853a6e26db91816288?rik=EOtbmcuDH2do4w&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f03%2fImage-green-wallpaper-HD.jpg&ehk=OogyyiXQnVTA%2f4Ln1Gwap3DOxIvAHxHhzCRqTus%2fnPE%3d&risl=&pid=ImgRaw&r=0" alt="Image 3">
+      <h2>Green</h2>
+    
+    </div>
+  </div>
+</body>
+</html>

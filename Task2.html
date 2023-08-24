@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Concepts</title>
+</head>
+<body>
+<section>
+  <h2>String Methods</h2>
+  <div id="stringOutput"></div>
+</section>
+
+<section>
+  <h2>Number Methods</h2>
+  <div id="numberOutput"></div>
+</section>
+
+<section>
+  <h2>Array Methods</h2>
+  <div id="arrayOutput"></div>
+</section>
+
+<section>
+  <h2>Date Methods</h2>
+  <div id="dateOutput"></div>
+</section>
+
+<section>
+  <h2>Function Methods</h2>
+  <div id="functionOutput"></div>
+</section>
+
+<script>
+  function stringMethods() {
+    let text = 'Hello, World!';
+    let output = `
+    <p>The word is: ${text}</p>
+    <p>In Upper Case: ${text.toUpperCase()}</p>
+    <p>In Lower Case: ${text.toLowerCase()}</p>
+    <p>The length of text: ${text.length}</p>
+    <p>Index of "W": ${text.indexOf('W')}</p>
+    <p>Substring: ${text.substring(0, 5)}</p>
+    `;
+    document.getElementById('stringOutput').innerHTML = output;
+  }
+
+  function numberMethods() {
+    let num = 42.879;
+    let output = `
+      <p>Using toFixed: ${num.toFixed(1)}</p>
+      <p>Using toPrecision: ${num.toPrecision(5)}</p>
+      <p>Using parseInt: ${parseInt('123')}</p>
+      <p>Using parseFloat: ${parseFloat('3.14')}</p>
+      <p>Using toExponential: ${num.toExponential(5)}</p>
+    `;
+    document.getElementById('numberOutput').innerHTML = output;
+  }
+
+  function arrayMethods() {
+    let fruits = ['apple', 'banana', 'cherry'];
+    let output = `
+    <p>List: ${fruits}</p>
+      <p>List using join: ${fruits.join('... ')}</p>
+      <p>push: ${fruits.push('orange')}</p>
+      <p>List after push: ${fruits}</p>
+      <p>pop: ${fruits.pop()}</p>
+      <p>List after pop: ${fruits}</p>
+      <p>concat: ${fruits.concat(['grape', 'kiwi'])}</p>
+      <p>List after concat: ${fruits}</p>
+      <p>Using indexOf for banana: ${fruits.indexOf('banana')}</p>
+    
+    `;
+    document.getElementById('arrayOutput').innerHTML = output;
+  }
+
+  function dateMethods() {
+    let now = new Date();
+    let output = `
+      <p>Date: ${now.toLocaleDateString()}</p>
+      <p>Hour: ${now.getHours()}</p>
+      <p>Minute: ${now.getMinutes()}</p>
+      <p>Month: ${now.getMonth()}</p>
+      <p>Year: ${now.getFullYear()}</p>
+    `;
+    document.getElementById('dateOutput').innerHTML = output;
+  }
+
+  function functionMethods() {
+    let name = "Johann";
+    function greet(name) {
+      return 'Hello, ' + name + '!';
+    }
+
+    let output = `
+      <p>Name: ${name}</p>
+      <p>Length: ${name.length}</p>
+      <p>${greet(name)}</p>
+    `;
+    document.getElementById('functionOutput').innerHTML = output;
+}
+
+  stringMethods();
+  numberMethods();
+  arrayMethods();
+  dateMethods();
+  functionMethods();
+</script>
+</body>
+</html>
